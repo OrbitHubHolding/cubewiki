@@ -1,0 +1,36 @@
+:root {
+    --global-accent: #cd3332;
+    
+    --global-wip: #f1ad8a;
+
+    --global-bg-down-1: #3d2323;
+    --global-bg: #553231;
+    --global-bg-up-1: #815857;
+
+    --header-footer-bg: #00000090;
+
+    --global-txt-main: #f5f5f5;
+    --global-txt-invert: #202020;
+    --global-txt-link: #d3c1ff;
+    --global-txt-link-clicked: #a785fd;
+
+    --global-font-body: 'Noto Sans', sans-serif;
+}
+
+html {
+    color: var(--global-txt-main);
+    background-color: var(--global-bg);
+    font-family: var(--global-font-body)
+}
+
+a { color: var(--global-txt-link); }
+a:visited { color: var(--global-txt-link-clicked); }
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}

@@ -1,0 +1,109 @@
+---
+import HeaderButton from './buttons/HeaderButton.astro';
+---
+<style>
+    :root {
+        --header-radius: 0.6rem;
+    }
+
+    a {
+        text
+        margin: 0.2em;
+    }
+    .logo {
+        margin: 0.4rem 1rem;
+    }
+    header {
+        padding: 0.6rem 2rem;
+        background-color: var(--header-footer-bg);
+        backdrop-filter: blur(10px);
+    }
+    nav {
+        position: relative;
+
+        height: 100%;
+        width: 100%;
+        max-width: 120ch;
+    }
+    .leftAlign{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .rightAlign{
+        position: absolute;
+        top:0;
+        right:0;
+
+        display: flex;
+    }
+
+	.tab {
+        padding: 0 0.4rem;
+        /* if i ever undo the combined tab
+        margin: 0 0.1rem;
+
+        border-radius: 0.5rem;
+        */
+        height: 2.5rem;
+
+        display: flex;
+        justify-content:center;
+        align-items: center;
+
+        font-weight: bold;
+    }
+    .search {
+        margin: 0 0.1rem;
+        border-radius: var(--header-radius);
+
+        width: auto;
+        aspect-ratio: 1;
+        background: var(--global-bg-down-1);
+    }
+    .search > p { font-size: 0.75rem;}
+    .logoPlaceholder {
+        margin-left: 0.1rem;
+        border-top-left-radius: var(--header-radius);
+        border-bottom-left-radius: var(--header-radius);
+
+        width: 9.5rem;
+        background: var(--global-accent);
+    }
+    .wip {
+        margin-right: 0.1rem;
+        border-top-right-radius: var(--header-radius);
+        border-bottom-right-radius: var(--header-radius);
+
+        width: 4rem;
+        background: var(--global-wip);
+        color: var(--global-txt-invert);
+    }
+    h2, p {
+        margin: 0;
+    }
+</style>
+
+<script>
+    const curPage = window.location.pathname
+    const selector = 'a[href="'+curPage+'"].headerButton'
+    document.querySelectorAll(selector).forEach(function(ele, idx) {
+        ele.classList.add('currentPage');
+    });
+</script>
+
+<header>
+    <nav>
+        <div class="leftAlign">
+            <div class="tab logoPlaceholder"><h2>Cube Wiki?</h2></div>
+		    <div class="tab wip"><h2>WIP</h2></div>
+            <div class="tab search"><p>search placeholder</p></div>
+        </div>
+        
+        <div class="rightAlign">
+            <HeaderButton location="/" text="Main Page" />
+            <HeaderButton location="/links/" text="About" />
+            <HeaderButton location="https://cubestudios.xyz" text="Main Site" />
+        </div>
+    </nav>
+</header>

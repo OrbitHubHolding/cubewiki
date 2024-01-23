@@ -1,0 +1,40 @@
+---
+const { title } = Astro.props;
+---
+<style>
+	.cardFrame {
+		width: 100%
+	}
+
+	.cardHeader{
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+		background-color: var(--global-accent);
+		height: 3rem;
+		
+		display: flex;
+		align-items: center;
+		padding: 0 1rem;
+	}
+	.cardHeader > h2 { margin: 0 }
+
+	.cardContent{
+		border-bottom-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+		background-color: var(--global-bg-up-1);
+		padding: 0.5rem 1.5rem;
+
+		word-wrap: break-word;
+	}
+	.cardHeader > p { width: 100% }
+
+</style>
+
+<div class="cardFrame">
+	<div class="cardHeader">
+		<h2>{title}</h2>
+	</div>
+	<div class="cardContent">
+		<slot />
+	<div/>
+</div>

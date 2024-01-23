@@ -1,0 +1,53 @@
+---
+const { location, text } = Astro.props;
+---
+<style>
+    :root {
+        --page-bg: #3e3642;
+        --page-bg-lighter: #695970;
+    }
+
+    a {
+        padding: 0 0.4rem;
+        margin: 0 0.1rem;
+
+        width: 7rem;
+        height: 2.5rem;
+        border-radius: var(--header-radius);
+
+        display: flex;
+        justify-content:center;
+        align-items: center;
+
+        font-weight: bold;
+        color: var(--global-txt);
+        background-color: var(--global-bg-down-1);
+        text-decoration: none;
+
+        transition: background-color .2s ease;
+    }
+    a:hover {
+        background-color: var(--global-bg);
+    }
+    a:active {
+        background-color: var(--global-bg-up-1);
+        transition: background-color .05s ease;
+    }
+    .currentPage::after {
+        content: "";
+        background: var(--global-accent);
+        border-radius: 50px;
+        width: 2rem;
+        height: 0.3rem;
+        position: absolute;
+        bottom: -0.725rem;
+
+        transition: width .2s ease;
+    }
+    .currentPage:hover::after {
+        width: 3rem;
+    }
+
+</style>
+
+<a class="headerButton" href={location}>{text}</a>
