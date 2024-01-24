@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Card from "../components/cards/Social.astro";
+import Card from "../components/cards/Standard.astro";
 const pageTitle = "home";
 ---
 
@@ -34,6 +34,12 @@ const pageTitle = "home";
 	.mainColumns > * {
 		word-wrap: break-word;
 	}
+
+	img {
+		max-width: 100%;
+		object-fit: contain;
+	}
+
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
@@ -41,25 +47,29 @@ const pageTitle = "home";
 		<h3>this site is still a massive WIP, so yeah. you can mess around but there isnt a lot to look at yet</h3>
 	</div>
 
-	<h1>testing stuff here please stay back it may explode at any second</h1>
+	<h1>fish(e) fan club</h1>
 	
 	<div class="mainColumns">
-		<Card title="testing yippee">
-			<p>hey look a card</p>
+		<Card title="a fish">
+			<img src="lefish.png" />
 		</Card>
-		<Card title="part 2">
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<Card title="a fishe">
+			<img src="fishe.png" />
 		</Card>
-		<Card title="oh ma gah">
-			<p>:3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3</p>
+		<Card title="">
+			<p>arent they beautiful</p>
 		</Card>
-		<Card title="part 4">
-			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<Card title="fish jumpscare">
+			<audio controls loop autoplay muted>
+				<source src="fish.ogg" type="audio/ogg" />
+				test
+			</audio>
+		</Card>
+		<Card title="AAA WHO IS THIS GUY">
+			<img src="HE HAS BEEN SUMMONED.png" />
+		</Card>
+		<Card title="i woulge">
+			<img src="woulge.png" />
 		</Card>
 	</div>
 	
