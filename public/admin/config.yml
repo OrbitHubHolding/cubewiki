@@ -1,0 +1,10 @@
+backend:
+  name: github
+  branch: main
+  repo: OrbitHubHolding/cubewiki
+  site_domain: wiki.cubestudios.xyz
+  base_url: https://wiki.cubestudios.xyz
+  auth_endpoint: oauth
+
+media_folder: "images/uploads" # media saved in the github repo
+public_folder: "/public/img/uploads" # media saved in the site structurenp
