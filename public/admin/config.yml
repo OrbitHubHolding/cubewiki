@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: OrbitHubHolding/cubewiki
   site_domain: test.cubestudios.xyz
-  base_url: https://test.cubestudios.xyz
+  base_url: http://test.cubestudios.xyz
   auth_endpoint: oauth
 
 media_folder: "images/uploads" # media saved in the github repo
