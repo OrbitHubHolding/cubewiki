@@ -5,6 +5,9 @@ backend:
   site_domain: test.cubestudios.xyz
   base_url: http://test.cubestudios.xyz
   auth_endpoint: oauth
+  open_authoring: false
+
+publish_mode: editorial_workflow
 
 media_folder: "images/uploads" # media saved in the github repo
 public_folder: "/public/img/uploads" # media saved in the site structurenp
