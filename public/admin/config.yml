@@ -4,7 +4,7 @@ backend:
   branch: main
   site_domain: test.cubestudios.xyz
   base_url: https://test.cubestudios.xyz
-  auth_endpoint: oauth
+  auth_endpoint: https://test.cubestudios.xyz/oauth
   open_authoring: true
 
 publish_mode: editorial_workflow
