@@ -2,9 +2,23 @@ backend:
   name: github
   branch: main
   repo: OrbitHubHolding/cubewiki
-  site_domain: wiki.cubestudios.xyz
-  base_url: https://wiki.cubestudios.xyz
+  site_domain: localhost:4321
+  base_url: http://localhost:4321
   auth_endpoint: oauth
 
 media_folder: "images/uploads" # media saved in the github repo
 public_folder: "/public/img/uploads" # media saved in the site structurenp
+
+collections:
+  - name: "tellus" # Used in routes, e.g., /admin/collections/blog
+    label: "Tellus" # Used in the UI
+    folder: "_wiki/tellus" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown"}
