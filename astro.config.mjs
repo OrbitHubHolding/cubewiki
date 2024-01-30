@@ -5,6 +5,6 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   output: "hybrid",
-  integrations: [decapCmsOauth()],
+  integrations: [decapCmsOauth({oauthDisabled: true})],
   adapter: cloudflare()
 });
