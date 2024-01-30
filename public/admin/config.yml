@@ -1,11 +1,11 @@
 backend:
   name: github
-  branch: main
   repo: OrbitHubHolding/cubewiki
+  branch: main
   site_domain: test.cubestudios.xyz
-  base_url: http://test.cubestudios.xyz
+  base_url: https://test.cubestudios.xyz
   auth_endpoint: oauth
-  open_authoring: false
+  open_authoring: true
 
 publish_mode: editorial_workflow
 
