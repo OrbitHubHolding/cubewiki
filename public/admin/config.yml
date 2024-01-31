@@ -6,8 +6,8 @@ backend:
   base_url: https://test.cubestudios.xyz
   auth_endpoint: /oauth
 
-media_folder: "images/uploads" # media saved in the github repo
-public_folder: "/public/img/uploads" # media saved in the site structurenp
+media_folder: "images/_wikiUploads" # media saved in the github repo
+public_folder: "/public/img/_wikiUploads" # media saved in the site structurenp
 
 collections:
   - name: pages # Used in routes, e.g., /admin/collections/blog
