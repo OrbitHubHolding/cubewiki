@@ -10,10 +10,23 @@ media_folder: "images/_wikiUploads" # media saved in the github repo
 public_folder: "/public/img/_wikiUploads" # media saved in the site structurenp
 
 collections:
-  - name: pages # Used in routes, e.g., /admin/collections/blog
-    label: Pages # Used in the UI
-    label_singular: 'Page'
-    folder: src/_wikiContent/pages # The path to the folder where the documents are stored
+  - name: "newsPages" # adding this for testing bc i think it doesnt like just having a single nested thing 
+    label: "News Pages"
+    folder: "src/_pages/newsPages"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "hidden", default: "pages" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: wikiPages # Used in routes, e.g., /admin/collections/blog
+    label: Wiki Pages # Used in the UI
+    label_singular: 'the one wiki page'
+    folder: src/_pages/wikiPages # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     #slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     nested:
