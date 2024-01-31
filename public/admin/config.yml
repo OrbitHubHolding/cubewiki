@@ -10,9 +10,10 @@ media_folder: "images/uploads" # media saved in the github repo
 public_folder: "/public/img/uploads" # media saved in the site structurenp
 
 collections:
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
-    label: "pages" # Used in the UI
-    folder: "src/_wikiContent" # The path to the folder where the documents are stored
+  - name: pages # Used in routes, e.g., /admin/collections/blog
+    label: Pages # Used in the UI
+    label_singular: 'Page'
+    folder: src/_wikiContent/pages # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     #slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     nested:
